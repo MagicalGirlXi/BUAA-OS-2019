@@ -56,7 +56,7 @@ int readelf(u_char *binary, int size)
         if (size < 4 || !is_elf_format(binary))
         {
                 printf("not a standard elf format\n");
-                return 0;
+                return -1;
         }
 
         // get section table addr, section header number and section header size.
